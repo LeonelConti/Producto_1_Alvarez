@@ -14,6 +14,7 @@ Este repositorio contiene los programas solicitados en el Producto 1, desarrolla
 | 2 | ejercicio2_while_fibonacci.asm | Calcula valores tipo Fibonacci con WHILE. |
 | 3 | ejercicio3_mcd.asm | Máximo común divisor usando restas de Euclides. |
 | 4 | ejercicio4_swap.asm | WHILE + condición final con intercambio (swap). |
+| 5 | ejercicio4_alt2swap.asm | WHILE + 2da condición final con intercambio (swap). |
 
 ## Cómo ejecutar
 1. Abrir el archivo en **emu8086** o **MASM**.
