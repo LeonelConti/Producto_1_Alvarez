@@ -24,7 +24,7 @@ BODY:
     add     bx, 2          ; b = b + 2
     mov     b, bx
 
-    jmp     WHILE_         ; volver a evaluar condición
+    jmp     WHILE_         ; volver a evaluar condiciÃ³n
 
 END_WHILE:
 
@@ -38,15 +38,18 @@ END_WHILE:
     mov     b, ax
     jmp     FIN
 
-DO_SWAP:                   ; intercambiar a y b
-    ; Usando registros temporales (claro y portátil)
-    mov     cx, ax         ; cx = a
-    mov     ax, bx         ; ax = b
-    mov     b, ax          ; b = (antes) b
-    mov     a, cx          ; a = (antes) a
+DO_SWAP:
+    mov     cx, ax     ; CX = a   (guardar el valor original de 'a')
+    mov     ax, bx     ; AX = b
+    mov     a,  ax     ; a = b   (guardar nuevo 'a' en memoria)
+
+    mov     bx, cx     ; BX = a_original
+    mov     b,  bx     ; b = a_original   (guardar nuevo 'b')
+    jmp     FIN
 
 FIN:
     mov     ax, 4C00h
     int     21h
 main endp
+
 end main
